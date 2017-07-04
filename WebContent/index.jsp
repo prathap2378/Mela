@@ -26,7 +26,7 @@
     <th width="50%">
 
     <div style="padding-top: 5px">
-	<button >Add Event</button>
+	<button onclick="document.forms[0].action = 'AddEvent.jsp' ; return true;">Add Event</button>
 
 	</div>
     <div align="left">
