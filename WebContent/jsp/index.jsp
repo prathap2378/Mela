@@ -1,3 +1,59 @@
+<<<<<<< HEAD
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="com.sun.xml.internal.txw2.output.*"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome to Mela</title>
+</head>
+<body onload="#">
+
+<form name='feeds' action="#" >
+
+<!-- action="Process.jsp" -->
+<table style="padding-top: 30px" id="header">
+  <tr >
+    <td width=40%>
+    <div>
+	<button onclick="document.forms[0].action = 'AddEvent.jsp'; return true;" class="button_style">Add Event</button>
+	</div>
+	</td>
+	<td width=60%>
+	<div id="namsteText" align="left" class="standard_label_style">Namaste!</div>
+	</td>
+	</tr>
+</table>
+<table width="100%">
+	<tr>
+	<td>
+	<!--<label class="standard_label_style" id="serchL">Search </label> -->
+	<input type="search" id="search_event" name="search_event" placeholder="Search..">
+	</td>
+	<td>
+	<!-- <label class="standard_label_style" id="locationL">Location </label> -->
+	<input type="text" id="location_event" name="location_event" class="eventLocation" placeholder="Location.."></td>
+	</tr>
+</table>
+<table width=100% class="borderFeeds">
+<tr>
+<td>
+<div class="feedsLabel">
+<label >Feeds</label>
+</div>
+</td>
+</tr>
+
+</table>
+</form>
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="../js/main.js"></script>
+</body>
+=======
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -72,4 +128,5 @@
 
 </form>
 </body>
+>>>>>>> refs/remotes/origin/master
 </html>

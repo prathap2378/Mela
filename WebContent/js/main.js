@@ -199,3 +199,23 @@ function person(name,age,color) {
 	this.color = color;
 	window.alert(this.name,this.age,color);
 }
+<<<<<<< HEAD
+//Object methods
+var myBike = {
+	bike : "gixxer",
+	color : "blue",
+	cc : '150cc',
+	mylage : '45km/l',
+	bikeSpecification : function() {
+		return "My bike is "+this.bike+", color is "+this.color+" it as egine of "+this.cc+" and it givse mylage of "+
+		this.mylage;
+	}
+}
+function objPrototype(carName, cc, color) {
+	this.carName = carName;
+	this.cc = cc;
+	this.color = color;
+}
+//function parameter
+=======
+>>>>>>> refs/remotes/origin/master
