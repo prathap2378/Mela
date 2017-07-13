@@ -199,7 +199,6 @@ function person(name,age,color) {
 	this.color = color;
 	window.alert(this.name,this.age,color);
 }
-<<<<<<< HEAD
 //Object methods
 var myBike = {
 	bike : "gixxer",
@@ -217,5 +216,3 @@ function objPrototype(carName, cc, color) {
 	this.color = color;
 }
 //function parameter
-=======
->>>>>>> refs/remotes/origin/master
