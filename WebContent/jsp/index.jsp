@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@page import="com.sun.xml.internal.txw2.output.*"%>
-<%@page import="java.util.Calendar"%>
-<%@page import="java.util.Date"%>
-<html>
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome to Mela</title>
-</head>
-<body onload="#">
-
-<form name='feeds' action="#" >
-
-<!-- action="Process.jsp" -->
-<table style="padding-top: 30px" id="header">
-  <tr >
-    <td width=40%>
-    <div>
-	<button onclick="document.forms[0].action = 'AddEvent.jsp'; return true;" class="button_style">Add Event</button>
-	</div>
-	</td>
-	<td width=60%>
-	<div id="namsteText" align="left" class="standard_label_style">Namaste!</div>
-	</td>
-	</tr>
-</table>
-<table width="100%">
-	<tr>
-	<td>
-	<!--<label class="standard_label_style" id="serchL">Search </label> -->
-	<input type="search" id="search_event" name="search_event" placeholder="Search..">
-	</td>
-	<td>
-	<!-- <label class="standard_label_style" id="locationL">Location </label> -->
-	<input type="text" id="location_event" name="location_event" class="eventLocation" placeholder="Location.."></td>
-	</tr>
-</table>
-<table width=100% class="borderFeeds">
-<tr>
-<td>
-<div class="feedsLabel">
-<label >Feeds</label>
-</div>
-</td>
-</tr>
-
-</table>
-</form>
-<link href="../css/main.css" rel="stylesheet" type="text/css">
-<script src="../js/main.js"></script>
-</body>
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="com.sun.xml.internal.txw2.output.*"%>
@@ -63,11 +7,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="main.css" rel="stylesheet" type="text/css">
 <title>Welcome to Mela</title>
 </head>
-<link href="../css/main.css" rel="stylesheet" type="text/css">
-<script src=home.js></script>
+
 <body onload="outPut()">
 
 <form name='feeds' action="#" >
@@ -89,8 +31,6 @@
     <div align="left">
 	<p id='time'></p>
 	</div>
-
-	
   </tr>
   <!-- <tr>
   <th>
@@ -98,8 +38,6 @@
 	<p id='today'>Today is</p>
 	</th>
   </tr> -->
-
-
 <tr>
 </tr>
 	<tr>
@@ -107,9 +45,6 @@
 	<td  align="center">Date:<input type="date" id="date_event" name="date_event"/></td>
 	<td  align="right">Search:<input type="text" id="search_event" name="search_event" size="100%" value="search here"/></td>
 	</tr>
-	
-
-
   <tr>
     <th align="center" width="50%">
     <div align="center">
@@ -118,15 +53,32 @@
     <th width="50%">
     <div align="center">
     <div id="namsteText" align="center">Namaste!</div>
+    <div id="a">
+    <p>Ajax call lets change this text</p>
+    <button id="id" onclick="loadDocAjax()">Change the content</button>
+    </div>
     </div>
     </th>
   </tr>
 </table>
 <script>
-//person('Bhanu','27','block');
-</script> 
+//Ajax function righting here
 
+function loadDocAjax() {
+  var xhttp = new XMLHttpRequest();
+  //The left-hand side of an assignment must be a variable
+  xhttp.onreadystatechange() = function () {
+    if (this.redyState == 4 && this.status == 5) {
+      document.getElementById('a').innerHTML = this.responseText;
+    }
+  };
+  xhttp.open('GET', 'ajax_info.txt', true);
+  xhttp.send();
+}
+
+</script> 
 </form>
 </body>
->>>>>>> refs/remotes/origin/master
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="../js/main.js" type="text/javascript"></script>
 </html>
