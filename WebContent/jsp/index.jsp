@@ -61,24 +61,18 @@
     </th>
   </tr>
 </table>
+<header>
+<h1>JSON and AJAX</h1>
+<input type="button" id="jsonid" value="Click Me"/>
+</header>
+<div id="divId">
+</div>
 <script>
-//Ajax function righting here
-
-function loadDocAjax() {
-  var xhttp = new XMLHttpRequest();
-  //The left-hand side of an assignment must be a variable
-  xhttp.onreadystatechange() = function () {
-    if (this.redyState == 4 && this.status == 5) {
-      document.getElementById('a').innerHTML = this.responseText;
-    }
-  };
-  xhttp.open('GET', 'ajax_info.txt', true);
-  xhttp.send();
-}
 
 </script> 
 </form>
 </body>
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <script src="../js/main.js" type="text/javascript"></script>
+<script src ="../js/json.js" type="text/javascript"></script>
 </html>

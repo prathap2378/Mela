@@ -327,8 +327,8 @@ function numberMethods() {
   console.log('Negative infinity value in JS=' + s)
   var s = Number.POSITIVE_INFINITY;
   console.log('Positive infinity value in JS---' + s)
-}//Function Parameters
-
+}
+//Function Parameters
 function parameters(a, b, c, d) {
   if (a == undefined) {
     a = 0;
